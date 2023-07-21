@@ -1,0 +1,19 @@
+name: Checkout an Azure Repo
+description: Action that allows to download and/or update an Azure Repo with submodules
+
+inputs:
+  repo_url:
+    description: full url of the Azure Repo
+    required: true
+  token:
+    description: token from the Azure DevOps environment
+    required: false
+    default: ''
+  username: 
+    required: false
+    default: ''
+  password:
+    required: false
+    default: ''
+
+  
