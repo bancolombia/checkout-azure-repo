@@ -36,6 +36,7 @@ runs:
         git clone https://${{ inputs.username }}:${{ inputs.token }}@${{ inputs.repo_url }}
     
     - name: Set working directory
-      working-directory: ${{ inputs.repo_name }}
+      shell: bash
+      run: cd /${{ inputs.repo_name }}
 
   
