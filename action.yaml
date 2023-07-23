@@ -1,6 +1,10 @@
 name: Checkout an Azure Repo
 description: Action that allows to download and/or update an Azure Repo with submodules. Works with both Azure credentials and Azure Token
 
+branding:
+  icon: 'arrow-down-circle'
+  color: 'black'
+
 inputs:
   repo_url:
     description: 'url of the Azure Repo. For example: azure.com/owner/repo'
