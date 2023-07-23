@@ -16,6 +16,7 @@ jobs:
           repo_url: ${{ secrets.REPO_URL }}
           username: ${{ secrets.AZURE_USERNAME }}
           token: ${{ secrets.AZURE_TOKEN }}
+          repo_name: NU0051001_Security_Services
       - name: repository content
         run: |
           ls
