@@ -1,4 +1,4 @@
-name: Checkout an Azure Repo
+name: checkout-azure-repo
 description: Action that allows to download and/or update an Azure Repo with submodules. Works with both Azure credentials and Azure Token
 
 branding:
