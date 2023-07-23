@@ -37,6 +37,8 @@ runs:
     
     - name: Set working directory
       shell: bash
-      run: cd /${{ inputs.repo_name }}
+      run: |
+        ls
+        cd ./${{ inputs.repo_name }}
 
   
