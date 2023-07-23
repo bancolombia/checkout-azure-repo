@@ -27,9 +27,9 @@ runs:
         git config --global user.name "${{ inputs.username }}"
         git config --global user.email "azure@azure.com"
 
-    - name: Clone repository
+    - name: Clone repository from ${{ inputs.repo_url }}
       shell: bash
       run: |
-        git clone https://${{inputs.username}}:${{inputs.token}}@${{ inputs.repo_url }}  
+        git clone https://${{ inputs.username }}:${{ inputs.token }}@${{ inputs.repo_url }}  
 
   
