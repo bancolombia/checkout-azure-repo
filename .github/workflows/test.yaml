@@ -9,7 +9,7 @@ jobs:
   checkout-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout attempt
+      - name: run action
         uses: ./
         with:
           repo_url: ${{ secrets.REPO_URL }}

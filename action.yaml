@@ -21,9 +21,9 @@ runs:
       shell: bash
       run: |
         echo 'hola'
-    - name: Clone repository
-      shell: bash
-      run: |
-        git clone ${{ inputs.repo_url }}  
+    #- name: Clone repository
+    #  shell: bash
+    #  run: |
+    #    git clone ${{ inputs.repo_url }}  
 
   
