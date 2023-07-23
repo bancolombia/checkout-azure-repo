@@ -8,7 +8,7 @@ The required variables for it to work can be appreciated next.
 
 | Variable | Descritpion | Example |
 | -------- | ----------- | ------- |
-| `repo_url` | Url of the Azure Repo. It is imporant that it __must not come with the https://__ | [azure.com/owner/repo]() |
+| `repo_url` | Url of the Azure Repo. It is imporant to notice that this variable __must not come with the https://__ | [azure.com/owner/repo]() |
 | `token` | Valid token from an Azure account. | xXyYzZ01?! |
 | `username` | Username of the Azure account | john_doe |
 
