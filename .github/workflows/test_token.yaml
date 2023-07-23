@@ -18,5 +18,4 @@ jobs:
           token: ${{ secrets.AZURE_TOKEN }}
           repo_name: NU0051001_Security_Services
       - name: repository content
-        run: |
-          ls
+        run: ls

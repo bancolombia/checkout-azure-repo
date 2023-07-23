@@ -12,12 +12,12 @@ inputs:
     description: boolean value which defines if the repository has submodules to update
     required: false
     default: false
+  token:
+    description: valid token from an Azure account
+    required: true
   username: 
     required: true
   password:
-    required: false
-    default: ''
-  token:
     required: false
     default: ''
 
@@ -34,11 +34,5 @@ runs:
       shell: bash
       run: |
         git clone https://${{ inputs.username }}:${{ inputs.token }}@${{ inputs.repo_url }}
-    
-    - name: Set working directory
-      shell: bash
-      run: |
-        ls
-        cd ./${{ inputs.repo_name }}
 
   
