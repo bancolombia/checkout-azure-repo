@@ -16,7 +16,7 @@ inputs:
     default: ''
   token:
     required: false
-    default: false
+    default: ''
 
 runs:
   using: 'composite'

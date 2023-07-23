@@ -13,7 +13,7 @@ jobs:
       - name: run action
         uses: ./
         with:
-          repo_url: ${{ secrets.REPO_URL }}
+          repo_url: ${{ REPO_URL }}
           username: ${{ secrets.AZURE_USERNAME }}
           token: ${{ secrets.AZURE_TOKEN }}
       - name: repository content
