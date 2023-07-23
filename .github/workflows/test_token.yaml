@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: run action for repo ${{ vars.REPO_URL }}
+      - name: run action 
         uses: ./
         with:
-          repo_url: ${{ vars.REPO_URL }}
+          repo_url: ${{ secrets.REPO_URL }}
           username: ${{ secrets.AZURE_USERNAME }}
           token: ${{ secrets.AZURE_TOKEN }}
       - name: repository content
