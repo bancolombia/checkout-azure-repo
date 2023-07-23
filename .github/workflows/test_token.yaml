@@ -15,7 +15,7 @@ jobs:
         with:
           repo_url: ${{ secrets.REPO_URL }}
           username: ${{ secrets.AZURE_USERNAME }}
-          password: ${{ secrets.AZURE_PASSWORD }}
+          token: ${{ secrets.AZURE_TOKEN }}
       - name: repository content
         run: |
           ls

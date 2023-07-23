@@ -1,9 +1,9 @@
 name: Checkout an Azure Repo
-description: Action that allows to download and/or update an Azure Repo with submodules
+description: Action that allows to download and/or update an Azure Repo with submodules. Works with both Azure credentials and Azure Token
 
 inputs:
   repo_url:
-    description: full url of the Azure Repo, in HTTPS
+    description: 'url of the Azure Repo. For example: azure.com/owner/repo'
     required: true
   submodules:
     description: boolean value which defines if the repository has submodules to update
@@ -12,18 +12,24 @@ inputs:
   username: 
     required: true
   password:
-    required: true
+    required: false
+    default: ''
+  token:
+    required: false
+    default: false
 
 runs:
   using: 'composite'
-  steps: 
-    - name: Set credentials
+  steps:
+    - name: Set git config
       shell: bash
       run: |
-        echo 'hola'
+        git config --global user.name "${{ inputs.username }}"
+        git config --global user.email "azure@azure.com"
+
     - name: Clone repository
       shell: bash
       run: |
-        git clone ${{ inputs.repo_url }}  
+        git clone https://${{inputs.username}}:${{inputs.token}}@${{ inputs.repo_url }}  
 
   
