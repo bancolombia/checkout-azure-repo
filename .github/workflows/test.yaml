@@ -1,0 +1,20 @@
+name: Testing of the action
+
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+  checkout-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout attempt
+        uses: ./
+        with:
+          repo_url: ${{ secrets.REPO_URL }}
+          username: ${{ secrets.AZURE_USERNAME }}
+          password: ${{ secrets.AZURE_PASSWORD }}
+      - name: repository content
+        run: |
+          ls

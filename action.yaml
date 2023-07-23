@@ -3,17 +3,27 @@ description: Action that allows to download and/or update an Azure Repo with sub
 
 inputs:
   repo_url:
-    description: full url of the Azure Repo
+    description: full url of the Azure Repo, in HTTPS
     required: true
-  token:
-    description: token from the Azure DevOps environment
+  submodules:
+    description: boolean value which defines if the repository has submodules to update
     required: false
-    default: ''
+    default: false
   username: 
-    required: false
-    default: ''
+    required: true
   password:
-    required: false
-    default: ''
+    required: true
+
+runs:
+  using: 'composite'
+  steps: 
+    - name: Set credentials
+      shell: bash
+      run: |
+        echo 'hola'
+    - name: Clone repository
+      shell: bash
+      run: |
+        git clone ${{ inputs.repo_url }}  
 
   
