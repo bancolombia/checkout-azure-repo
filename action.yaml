@@ -6,7 +6,7 @@ inputs:
     description: 'url of the Azure Repo. For example: azure.com/owner/repo'
     required: true
   repo_name:
-    description: name of the repository from Azure
+    description: name of the cloned folder
     required: true
   submodules:
     description: boolean value which defines if the repository has submodules to update
@@ -35,8 +35,7 @@ runs:
       run: |
         git clone https://${{ inputs.username }}:${{ inputs.token }}@${{ inputs.repo_url }}
     
-    - name: Set terminal location
-      shell: bash
-      run: cd ${{ inputs.repo_name }}
+    - name: Set working directory
+      working-directory: ${{ inputs.repo_name }}
 
   
